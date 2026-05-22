@@ -1,4 +1,18 @@
-"""Command-line entry point for gwc."""
+"""Command-line entry point for gwc.
+
+Subcommands
+-----------
+status-summary
+    Print a one-line summary of the current branch state.
+branch-name
+    Generate a conventional branch name for an issue.
+clean-merged
+    List or delete local branches fully merged into main.
+sync
+    Synchronize the current branch with its tracked upstream without rebasing.
+    Implemented in ``git_ops.sync_current_branch`` and registered through the
+    ``--sync`` legacy alias for backward compatibility with the 0.0.x series.
+"""
 from __future__ import annotations
 
 import argparse
